@@ -368,24 +368,6 @@ export default class CountryPicker extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity
-          disabled={this.props.disabled}
-          onPress={() => this.setState({ modalVisible: true })}
-          activeOpacity={0.7}
-        >
-          {this.props.children ? (
-            this.props.children
-          ) : (
-            <View
-              style={[styles.touchFlag, { marginTop: isEmojiable ? 0 : 5 }]}
-            >
-              {CountryPicker.renderFlag(this.props.cca2,
-                styles.itemCountryFlag,
-                styles.emojiFlag,
-                styles.imgStyle)}
-            </View>
-          )}
-        </TouchableOpacity>
         <Modal
           transparent={this.props.transparent}
           animationType={this.props.animationType}
